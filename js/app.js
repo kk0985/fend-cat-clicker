@@ -7,14 +7,14 @@ var figures = {
 		{
 			clickCount: 0,
 			name: 'Little Cute Cat',
-			imgSrc: 'images/little_cute_cat.jpg',
-			imgAttribution : 'petattack.com/socializing-cats/'
+			imageSrc: 'images/little_cute_cat.jpg',
+			imageAttribution : 'petattack.com/socializing-cats/'
 		},
 		{
 			clickCount: 0,
 			name: 'Adorable Cat',
-			imgSrc: 'images/adorable-cat',
-			imgAttribution : 'https://www.petsworld.in/blog/cat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html'
+			imageSrc: 'images/adorable-cat',
+			imageAttribution : 'https://www.petsworld.in/blog/cat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html'
 		}
 		]
 };
@@ -25,7 +25,7 @@ var octopus = {
 
     init: function() {
         // set our current cat to the first one in the list
-        model.currentCat = model.cats[0];
+        figures.currentCat = figures.cats[0];
 
         // tell our views to initialize
         catListView.init();
@@ -33,21 +33,21 @@ var octopus = {
     },
 
     getCurrentCat: function() {
-        return model.currentCat;
+        return figures.currentCat;
     },
 
     getCats: function() {
-        return model.cats;
+        return figures.cats;
     },
 
     // set the currently-selected cat to the object passed in
     setCurrentCat: function(cat) {
-        model.currentCat = cat;
+        figures.currentCat = cat;
     },
 
     // increments the counter for the currently-selected cat
     incrementCounter: function() {
-        model.currentCat.clickCount++;
+        figures.currentCat.clickCount++;
         catView.render();
     }
 };
