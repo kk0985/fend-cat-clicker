@@ -15,7 +15,25 @@ var figures = {
 			name: 'Adorable Cat',
 			imgSrc: 'images/adorable-cat.jpg',
 			imgAttribution : 'https://www.petsworld.in/blog/cat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html'
-		}
+		},
+        {
+            clickCount: 0,
+            name: 'What U Say Cat',
+            imgSrc: 'images/cat.jpg',
+            imgAttribution: 'https://www.petfinder.com/animal-shelters-and-rescues/fostering-cats/'
+        },
+        {
+            clickCount: 0,
+            name: 'Winged Cat',
+            imgSrc: 'images/winged-cat.jpg',
+            imgAttribution: 'https://www.reddit.com/r/explainlikeimfive/comments/2irfyo/eli5_if_cats_are_lactoseintolerant_how_did_we/'
+        },
+        {
+            clickCount: 0,
+            name: 'Cat and Dog',
+            imgSrc: 'images/Dog-and-cat.jpg',
+            imgAttribution: 'http://www.fanpop.com/clubs/teddybear64/images/16834786/title/dog-cat-wallpaper-wallpaper'
+        },
 	]
 };
 
