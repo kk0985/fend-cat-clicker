@@ -1,7 +1,7 @@
 
-/* ========Figures======= */
+/* ========Model======= */
 
-var figures = {
+var model = {
 	currentCat: null,
 	cats: [
 		{
@@ -34,7 +34,8 @@ var figures = {
             imgSrc: 'images/Dog-and-cat.jpg',
             imgAttribution: 'http://www.fanpop.com/clubs/teddybear64/images/16834786/title/dog-cat-wallpaper-wallpaper'
         },
-	]
+	],
+    admin: false
 };
 
 /* ======= Octopus ======= */
@@ -43,33 +44,53 @@ var octopus = {
 
     init: function() {
         // set our current cat to the first one in the list
-        figures.currentCat = figures.cats[0];
+        model.currentCat = model.cats[0];
 
         // tell our views to initialize
         catListView.init();
         catView.init();
     },
 
+    update: function() {
+
+        this.toggleadmin(); //turn off Stats button
+        $('.cat-list').empty;
+        catView.render();
+        catListView.render();
+    },
+
     getCurrentCat: function() {
-        return figures.currentCat;
+        return model.currentCat;
     },
 
     getCats: function() {
-        return figures.cats;
+        return model.cats;
     },
 
     // set the currently-selected cat to the object passed in
     setCurrentCat: function(cat) {
-        figures.currentCat = cat;
+        model.currentCat = cat;
     },
 
     // increments the counter for the currently-selected cat
     incrementCounter: function() {
-        figures.currentCat.clickCount++;
+        model.currentCat.clickCount++;
         catView.render();
-    }
-};
+    },
 
+    toggleAdmin: function() {
+            if (model.admin) {
+                model.admin = false;
+            } else {
+                model.admin = true;
+            };
+            admin.render();
+        },
+
+        adminMode: function() {
+            return model.admin;
+        },
+};
 
 /* ======= View ======= */
 
@@ -142,6 +163,21 @@ var catListView = {
         }
     }
 };
+
+var formView = {
+  init: function() {
+    this.adminView = document.getElementById('adminView');
+    // more dom elements cached too
+
+    // add event listeners
+
+    // admin button
+    this.adminView.addEventListener("click", function() {
+      formView.toggleAdminState();
+    })
+
+   }
+ };
 
 // make it go!
 octopus.init();

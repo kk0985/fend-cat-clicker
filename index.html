@@ -2,15 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cat Clicker</title>
+    <title>Cat Clicker Premium Pro</title>
+    <meta name="description" content="Cat Clicker Project">
 </head>
+
+<header>
+	<h1> Cat Clicker 4.0 </h1>
+	<p> By Kris Klingberg </p>
+</header>
+
 <body>
+	<h3> Let us know your favorite cat. </h3>
+	<p> View each of the cats listed below.
+		Then click on the picture of your selection. </p>
+
     <ul id="cat-list"></ul>
     <div id="cat">
         <h2 id="cat-name"></h2>
         <div id="cat-count"></div>
         <img id="cat-img" src="" alt="cute cat">
     </div>
+
+    <div id="admin">
+    	<button id="adminView"> View Stats </button>
+    	<section class="hide" id="adminView">
+    	<h2> Stats </h2>
+    		<form id="form">
+    			<p>
+    				<label for="input-name"> Name </label>
+    				<input type="text" id="input-name" name="input-name" />
+    			</p>
+    			<p>
+    				<label for="imgURL"> Image Source </label>
+    				<input type="text" id="imgURL" name="imgAttribution" />
+    			</p>
+    			<p>
+    				<label for="input-clickCount"> Click Count </label>
+    				<input type="text" id="input-clickCount" name="clickCount" />
+    			</p>
+
+    			<button id="cancel" type="cancel"> Cancel </button>
+    			<button type="submit"> Save </button>
+    		</form>
+    </div>
+
     <script src="js/app.js"></script>
 </body>
 </html>
