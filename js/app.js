@@ -13,10 +13,10 @@ var figures = {
 		{
 			clickCount: 0,
 			name: 'Adorable Cat',
-			imgSrc: 'images/adorable-cat',
+			imgSrc: 'images/adorable-cat.jpg',
 			imgAttribution : 'https://www.petsworld.in/blog/cat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html'
 		}
-		]
+	]
 };
 
 /* ======= Octopus ======= */
