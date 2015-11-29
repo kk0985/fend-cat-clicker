@@ -7,14 +7,14 @@ var figures = {
 		{
 			clickCount: 0,
 			name: 'Little Cute Cat',
-			imageSrc: 'images/little_cute_cat.jpg',
-			imageAttribution : 'petattack.com/socializing-cats/'
+			imgSrc: 'images/little_cute_cat.jpg',
+			imgAttribution : 'petattack.com/socializing-cats/'
 		},
 		{
 			clickCount: 0,
 			name: 'Adorable Cat',
-			imageSrc: 'images/adorable-cat',
-			imageAttribution : 'https://www.petsworld.in/blog/cat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html'
+			imgSrc: 'images/adorable-cat',
+			imgAttribution : 'https://www.petsworld.in/blog/cat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html'
 		}
 		]
 };
