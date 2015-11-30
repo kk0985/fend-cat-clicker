@@ -2,20 +2,20 @@
 /* ========Model======= */
 
 var model = {
-	currentCat: null,
-	cats: [
-		{
-			clickCount: 0,
-			name: 'Little Cute Cat',
-			imgSrc: 'images/little_cute_cat.jpg',
-			imgAttribution : 'petattack.com/socializing-cats/'
-		},
-		{
-			clickCount: 0,
-			name: 'Adorable Cat',
-			imgSrc: 'images/adorable-cat.jpg',
-			imgAttribution : 'https://www.petsworld.in/blog/cat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html'
-		},
+    currentCat: null,
+    cats: [
+        {
+            clickCount: 0,
+            name: 'Little Cute Cat',
+            imgSrc: 'images/little_cute_cat.jpg',
+            imgAttribution : 'petattack.com/socializing-cats/'
+        },
+        {
+            clickCount: 0,
+            name: 'Adorable Cat',
+            imgSrc: 'images/adorable-cat.jpg',
+            imgAttribution : 'https://www.petsworld.in/blog/cat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html'
+        },
         {
             clickCount: 0,
             name: 'What U Say Cat',
@@ -34,8 +34,7 @@ var model = {
             imgSrc: 'images/Dog-and-cat.jpg',
             imgAttribution: 'http://www.fanpop.com/clubs/teddybear64/images/16834786/title/dog-cat-wallpaper-wallpaper'
         },
-	],
-    admin: false
+    ],
 };
 
 /* ======= Octopus ======= */
@@ -49,14 +48,6 @@ var octopus = {
         // tell our views to initialize
         catListView.init();
         catView.init();
-    },
-
-    update: function() {
-
-        this.toggleadmin(); //turn off Stats button
-        $('.cat-list').empty;
-        catView.render();
-        catListView.render();
     },
 
     getCurrentCat: function() {
@@ -76,21 +67,9 @@ var octopus = {
     incrementCounter: function() {
         model.currentCat.clickCount++;
         catView.render();
-    },
-
-    toggleAdmin: function() {
-            if (model.admin) {
-                model.admin = false;
-            } else {
-                model.admin = true;
-            };
-            admin.render();
-        },
-
-        adminMode: function() {
-            return model.admin;
-        },
+    }
 };
+
 
 /* ======= View ======= */
 
@@ -163,21 +142,6 @@ var catListView = {
         }
     }
 };
-
-var formView = {
-  init: function() {
-    this.adminView = document.getElementById('adminView');
-    // more dom elements cached too
-
-    // add event listeners
-
-    // admin button
-    this.adminView.addEventListener("click", function() {
-      formView.toggleAdminState();
-    })
-
-   }
- };
 
 // make it go!
 octopus.init();
