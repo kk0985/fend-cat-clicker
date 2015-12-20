@@ -48,6 +48,7 @@ var octopus = {
         // tell our views to initialize
         catListView.init();
         catView.init();
+        adminView.init();
     },
 
     getCurrentCat: function() {
@@ -67,7 +68,7 @@ var octopus = {
     incrementCounter: function() {
         model.currentCat.clickCount++;
         catView.render();
-    }
+    },
 };
 
 
@@ -142,6 +143,34 @@ var catListView = {
         }
     }
 };
+
+var adminView = {
+        init: function(){
+            var admin = document.getElementById('btnAdmin');
+            var cancel = document.getElementById('cancel');
+            var save = document.getElementById('submit');
+            var name = document.getElementById('input-name');
+            var src = document.getElementById('imgAttribution');
+            var clicks = document.getElementById('clickCount');
+
+            admin.addEventListener('click', function(){
+                document.getElementById('adminView').style.display = 'inline-block';
+                var currentCat = octopus.getCurrentCat();
+                name.value = model.currentCat.name;
+                src.value = model.currentCat.imgAttribution;
+                clicks.value = model.currentCat.clickCount;
+            });
+
+            cancel.addEventListener('click', function(){
+                document.getElementById('adminView').style.display = 'none';
+            });
+
+            save.addEventListener('click', function(){
+                octopus.updateCat(name.value, src.value, clicks.value);
+                document.getElementById('adminView').style.display = 'none';
+            });
+        }
+    };
 
 // make it go!
 octopus.init();
